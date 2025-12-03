@@ -8,6 +8,10 @@ cd USAR_SLAM
 ```
 colcon build
 ```
+Make sure that you add the new workspace to your `.bashrc` file.  
+```
+echo "source /home/arms/USAR_SLAM/install/setup.bash" >> ~/.bashrc
+```
 Find the datasets (i.e. ROSBAG files over here):
 ```
 Link will be placed after anonymising is over!
@@ -51,5 +55,5 @@ The sensor configuration corresponds to the Fig. 3 in the paper.
 The sensor IDs (UWB Radar: Left and Right) also follow the same.  
 TurtleBot's default bringup topics are their default (e.g. /cmd_vel, /odom).  
 UWB Radar readings [raw]:  
-Left:  `/UWBradar1/readings`  
-Right: `/UWBradar2/readings`  
+Left:  `/UWBradar0/readings`  
+Right: `/UWBradar1/readings`  
