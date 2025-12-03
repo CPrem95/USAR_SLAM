@@ -31,7 +31,7 @@ Open RViz in a new terminal
 ```
 rviz2
 ```
-Go to **Add** &larr; **By topic** &larr; **/visualization_marker_array/MarkerArray** to visualize the pose graph within rviz2.  
+Go to **Add** &rarr; **By topic** &rarr; **/visualization_marker_array/MarkerArray** to visualize the pose graph within rviz2.  
 
   
 You can see the results now!  
