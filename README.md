@@ -14,22 +14,31 @@ Link will be placed after anonymising is over!
 ```
 Now you have the complete USAR SLAM system and the datasets.  
 You can recreate the results in the video now.  
-First, open a new terminal, and run the CERES graph SLAM backend.  
+First, open a **new terminal**, and run the CERES graph SLAM backend.  
 ```
 ros2 run my_ceres opti_node 
 ```
-Open a new terminal, and run the USAR_SLAM backend.  
+Open a **new terminal**, and run the USAR_SLAM backend.  
 ```
 ros2 run usar_slam node
 ```
-Open a new terminal, go to the downloaded rosbags, and play the rosbag file.
+Open a **new terminal**, go to the downloaded rosbags, and play the rosbag file.
 ```
 ros2 bag play rosbag2_2025_08_27-18_25_42_0.db3
 ```
+### Visualization
+Open RViz in a new terminal  
+```
+rviz2
+```
+Go to **Add** &larr; **By topic** &larr; **/visualization_marker_array/MarkerArray** to visualize the pose graph within rviz2.  
+
+  
 You can see the results now!  
 Meanwhile, read the following instructions carefully.  
 
 Once you have finished teleoperation (i.e. the bag file stopped playing), run the following command to stop SLAM and to deplete the accumulated readings.  
+**New terminal**  
 ```
 ros2 topic pub /stop_slam std_msgs/msg/Bool '{data: true}' --once 
 ```
